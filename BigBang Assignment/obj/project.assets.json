@@ -1328,6 +1328,16 @@
             "rid": "win"
           }
         }
+      },
+      "Class/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Class.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Class.dll": {}
+        }
       }
     }
   },
@@ -3896,10 +3906,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Class/1.0.0": {
+      "type": "project",
+      "path": "../Class/Class.csproj",
+      "msbuildProject": "../Class/Class.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Class >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.14",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 6.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
@@ -3933,7 +3949,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\mukul\\OneDrive\\Desktop\\Company\\BigBang Assignment\\Class\\Class.csproj": {
+              "projectPath": "C:\\Users\\mukul\\OneDrive\\Desktop\\Company\\BigBang Assignment\\Class\\Class.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
