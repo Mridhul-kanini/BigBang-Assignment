@@ -21,13 +21,13 @@ namespace BigBang_Assignment.Controllers
             _roomRepository = roomRepository;
         }
 
-        [HttpGet("hotel/{hotelId}")]
-        public async Task<IActionResult> GetRoomsByHotelId(int hotelId)
+        [HttpGet]
+        public async Task<IActionResult> GetRooms()
         {
             try
             {
-                var rooms = await _roomRepository.GetRoomsByHotelId(hotelId);
-                return Ok(rooms);
+                var room = _roomRepository.GetRooms();
+                return Ok(room);
             }
             catch (Exception)
             {
@@ -53,18 +53,21 @@ namespace BigBang_Assignment.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddRoom(Room room)
+        public IActionResult AddRoom(Room room)
         {
             try
             {
-                await _roomRepository.AddRoom(room);
-                return CreatedAtAction(nameof(GetRoomById), new { id = room.RoomId }, room);
+                var newHotel = _roomRepository.AddRoom(room);
+                return CreatedAtAction(nameof(GetRoomById), new { id = newHotel.Id }, newHotel);
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return StatusCode(500, "An error occurred while adding the room.");
+                Console.WriteLine($"An error occurred while adding the room: {ex.Message}");
+                return StatusCode(500, "An error occurred while adding the room. Please try again later.");
             }
         }
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateRoom(int id, Room room)

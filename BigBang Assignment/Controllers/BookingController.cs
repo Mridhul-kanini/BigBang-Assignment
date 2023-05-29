@@ -55,13 +55,20 @@ namespace BigBang_Assignment.Controllers
             try
             {
                 var newBooking = _bookingRepository.AddBooking(booking);
+                if (newBooking == null)
+                {
+                    return BadRequest("Invalid booking data");
+                }
+
                 return CreatedAtAction(nameof(GetBookingById), new { id = newBooking.BookingId }, newBooking);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return StatusCode(500, "An error occurred while adding the booking.");
+                Console.WriteLine($"An error occurred while adding the booking: {ex.Message}");
+                return StatusCode(500, "An error occurred while adding the booking. Please try again later.");
             }
         }
+
 
         [HttpPut("{id}")]
         public IActionResult UpdateBooking(int BookingId, Booking booking)

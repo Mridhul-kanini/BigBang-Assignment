@@ -10,6 +10,8 @@ namespace BigBang_Assignment.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
+
+
     public class HotelController : ControllerBase
     {
         private readonly IHotel _hotelRepository;
@@ -40,7 +42,7 @@ namespace BigBang_Assignment.Controllers
             {
                 var hotel = _hotelRepository.GetHotelById(id);
                 if (hotel == null)
-                    return NotFound("Hotel not found.");
+                    throw new Exception($"{id}");
 
                 return Ok(hotel);
             }
@@ -49,6 +51,8 @@ namespace BigBang_Assignment.Controllers
                 return StatusCode(500, $"An error occurred while retrieving the hotel: {ex.Message}");
             }
         }
+
+
 
 
         [HttpPost]
@@ -78,7 +82,7 @@ namespace BigBang_Assignment.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"An error occurred while updating the hotel: {ex.Message}");
+                return StatusCode(500, $"An error occurred while updating the hotel: {ex.InnerException?.Message}");
             }
         }
 
@@ -89,7 +93,7 @@ namespace BigBang_Assignment.Controllers
             {
                 var deletedHotel = _hotelRepository.DeleteHotel(id);
                 if (deletedHotel == null)
-                    return NotFound();
+                    throw new Exception($"{id}Hotel not found.");
 
                 return Ok(deletedHotel);
             }
@@ -99,7 +103,7 @@ namespace BigBang_Assignment.Controllers
             }
         }
 
-        [HttpGet("count")]
+        [HttpGet]
         public IActionResult GetHotelCount()
         {
             try
@@ -113,7 +117,7 @@ namespace BigBang_Assignment.Controllers
             }
         }
 
-        [HttpGet("filter/location/{location}")]
+        [HttpGet]
         public IActionResult FilterHotelsByLocation(string location)
         {
             try

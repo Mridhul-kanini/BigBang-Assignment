@@ -40,7 +40,7 @@ namespace BigBang_Assignment.Controllers
             {
                 var customer = _customerRepository.GetCustomerById(id);
                 if (customer == null)
-                    return NotFound();
+                    throw new Exception("Customer not found.");
 
                 return Ok(customer);
             }

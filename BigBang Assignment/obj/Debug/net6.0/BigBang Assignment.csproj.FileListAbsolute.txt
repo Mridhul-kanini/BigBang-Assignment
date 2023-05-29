@@ -90,3 +90,18 @@ C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\ob
 C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\obj\Debug\net6.0\BigBang Assignment.pdb
 C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\obj\Debug\net6.0\BigBang Assignment.genruntimeconfig.cache
 C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\obj\Debug\net6.0\ref\BigBang Assignment.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Class.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Class.pdb
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Serilog.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Serilog.Sinks.File.dll
+C:\Users\mukul\OneDrive\Desktop\Company\BigBang Assignment\BigBang Assignment\bin\Debug\net6.0\Serilog.Expressions.dll

@@ -4,7 +4,7 @@ namespace BigBang_Assignment.Repository
 {
     public interface IRoom
     {
-        Task<IEnumerable<Room>> GetRoomsByHotelId(int hotelId);
+        Task<IEnumerable<Room>> GetRooms();
         Task<Room> GetRoomById(int roomId);
         Task AddRoom(Room room);
         Task UpdateRoom(int roomId, Room room);

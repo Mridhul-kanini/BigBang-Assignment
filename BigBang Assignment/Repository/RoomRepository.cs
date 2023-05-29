@@ -15,15 +15,15 @@ namespace BigBang_Assignment.Repository
             _dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<Room>> GetRoomsByHotelId(int RoomId)
+        public async Task<IEnumerable<Room>> GetRooms()
         {
             try
             {
-                return (IEnumerable<Room>)await _dbContext.Rooms.FindAsync(RoomId);
+                return _dbContext.Rooms.ToList();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"An error occurred while retrieving room with ID {RoomId}: {ex.Message}");
+                Console.WriteLine($"An error occurred while retrieving room with ID : {ex.Message}");
                 return null;
             }
 

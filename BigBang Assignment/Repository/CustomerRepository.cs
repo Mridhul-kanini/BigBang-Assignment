@@ -26,8 +26,8 @@ namespace BigBang_Assignment.Repository
 
         public Customer AddCustomer(Customer customer)
         {
-            if (customer == null)
-                throw new ArgumentNullException(nameof(customer));
+            var hotel = _context.Hotels.Find(customer.Hotel.HotelId);
+            customer.Hotel = hotel;
 
             _context.Customers.Add(customer);
             _context.SaveChanges();

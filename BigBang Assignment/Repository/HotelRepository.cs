@@ -22,7 +22,7 @@ namespace BigBang_Assignment.Repository
 
         public Hotel GetHotelById(int hotelId)
         {
-            return _context.Hotels.Include(h => h.Rooms).FirstOrDefault(h => h.HotelId == hotelId);
+            return _context.Hotels.Find(hotelId);
         }
 
         public Hotel AddHotel(Hotel hotel)
